@@ -1,13 +1,15 @@
 {
-	"version": "1.0.0",
-	"name": "Duitku.name",
-	"description": "Duitku.description",
-	"authors": [
+    "version": "2.0.0",
+    "name": "Duitku.name",
+    "description": "Duitku.description",
+    "authors": [
         {
             "name": "Phillips Data, Inc.",
             "url": "http://blesta.com"
         }
     ],
-	"currencies": ["IDR"],
-	"signup_url": "https://dashboard.duitku.com/Account/Register"
+    "currencies": [
+        "IDR"
+    ],
+    "signup_url": "https://dashboard.duitku.com/Account/Register"
 }

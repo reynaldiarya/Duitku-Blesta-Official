@@ -1,20 +1,21 @@
-<ul>
-    <li>
+
+<div class="mb-3">
+    <?php
+    $this->Form->label($this->_('Duitku.merchant_key', true), 'merchant_key', ['class' => 'form-label']);
+    $this->Form->fieldText('merchant_key', ($meta['merchant_key'] ?? null), ['id' => 'merchant_key', 'class' => 'form-control']);
+    ?>
+</div>
+<div class="mb-3">
+    <?php
+    $this->Form->label($this->_('Duitku.merchant_code', true), 'merchant_code', ['class' => 'form-label']);
+    $this->Form->fieldText('merchant_code', ($meta['merchant_code'] ?? null), ['id' => 'merchant_code', 'class' => 'form-control']);
+    ?>
+</div>
+<div class="mb-3">
+    <div class="form-check">
         <?php
-        $this->Form->label($this->_('Duitku.merchant_key', true), 'merchant_key');
-        $this->Form->fieldText('merchant_key', ($meta['merchant_key'] ?? null), ['id'=>'merchant_key']);
+        $this->Form->fieldCheckbox('sandbox', 'true', (($meta['sandbox'] ?? 'false') == 'true'), ['id' => 'sandbox', 'class' => 'form-check-input']);
+        $this->Form->label($this->_('Duitku.sandbox', true), 'sandbox', ['class' => 'form-check-label']);
         ?>
-    </li>
-    <li>
-        <?php
-        $this->Form->label($this->_('Duitku.merchant_code', true), 'merchant_code');
-        $this->Form->fieldText('merchant_code', ($meta['merchant_code'] ?? null), ['id'=>'merchant_code']);
-        ?>
-    </li>
-    <li>
-        <?php
-        $this->Form->fieldCheckbox('sandbox', 'true', (($meta['sandbox'] ?? 'false') == 'true'), ['id'=>'sandbox']);
-        $this->Form->label($this->_('Duitku.sandbox', true), 'sandbox', ['class'=>'inline']);
-        ?>
-    </li>
-</ul>
+    </div>
+</div>
